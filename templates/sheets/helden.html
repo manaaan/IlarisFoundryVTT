@@ -37,15 +37,11 @@
                 <div class="flexrow"></div>
                 <a
                     class="icon-small toggle-bool {{actor.system.gesundheit.wundenignorieren}}"
-                    data-togglevariable="actor.system.gesundheit.wundenignorieren">
-                    Wundabzüge ignorieren 
-                    {{#if actor.system.gesundheit.wundenignorieren}}
-                        (aktiviert)
-                    {{else}}
-                        (nicht aktiv)
-                    {{/if}}
+                    data-togglevariable="actor.system.gesundheit.wundenignorieren"
+                >
+                    Wundabzüge ignorieren {{#if actor.system.gesundheit.wundenignorieren}}
+                    (aktiviert) {{else}} (nicht aktiv) {{/if}}
                 </a>
-            </div>
             </div>
             {{log 'ships' this.actor.system.schips}}
             <div style="float: left">
@@ -90,20 +86,32 @@
             </div>
         </div>
         <div style="float: left"></div>
-        </div>
         <div class="flexrow">
-            <label style="{{#if actor.system.gesundheit.wundenignorieren }}text-decoration:line-through;{{/if}}">{{actor.system.gesundheit.display}}</label>
+            <label
+                style="{{#if actor.system.gesundheit.wundenignorieren }}text-decoration:line-through;{{/if}}"
+                >{{actor.system.gesundheit.display}}</label
+            >
         </div>
         <div class="flexrow">
             <label>{{actor.system.furcht.display}}</label>
         </div>
         <div class="flexrow">
-            <input class="flex0" name="system.modifikatoren.manuellermod" value="{{actor.system.modifikatoren.manuellermod}}" type="text" data-dtype="Number">
+            <input
+                class="flex0"
+                name="system.modifikatoren.manuellermod"
+                value="{{actor.system.modifikatoren.manuellermod}}"
+                type="text"
+                data-dtype="Number"
+            />
             <label>auf alle Proben (Manuell) </label>
         </div>
-        <hr/>
+        <hr />
         <div class="flexrow">
-            <b><label style="color: {{modColor actor.system.abgeleitete.globalermod}}">{{actor.system.abgeleitete.globalermoddisplay}}</label></b>
+            <b
+                ><label style="color: {{modColor actor.system.abgeleitete.globalermod}}"
+                    >{{actor.system.abgeleitete.globalermoddisplay}}</label
+                ></b
+            >
         </div>
     </div>
     <div style="clear: both"></div>
